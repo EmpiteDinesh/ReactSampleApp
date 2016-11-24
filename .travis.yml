@@ -16,7 +16,7 @@ android: #1.3
   - addon-google_apis-google-16
 script:
 - cd android && chmod +x gradlew #3
-#- emulator -avd test -no-skin -no-audio -no-window &
+- emulator -avd test -no-skin -no-audio -no-window &
 #- ./gradlew assembleDebug --stacktrace #3
 - ./gradlew build connectedCheck --stacktrace #3
 - cd app/build/outputs
