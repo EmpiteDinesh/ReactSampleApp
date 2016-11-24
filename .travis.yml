@@ -5,6 +5,8 @@ before_install: #1.1
 - nvm install 6
 - node --version
 install: #1.2
+- git status
+- pwd
 - git update-index --chmod=+x gradlew
 - npm install
 android: #1.3
