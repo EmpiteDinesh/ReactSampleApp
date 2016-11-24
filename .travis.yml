@@ -25,3 +25,4 @@ before_script:
 script:
   - cd android && chmod +x gradlew
   - ./gradlew assembleDebug
+  - ls
