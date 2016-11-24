@@ -18,5 +18,4 @@ script:
 - npm run ci #2
 - cd android && chmod +x gradlew #3
 - emulator -avd test -no-skin -no-audio -no-window &
-- android-wait-for-emulator
 - ./gradlew assembleDebug --stacktrace #3
