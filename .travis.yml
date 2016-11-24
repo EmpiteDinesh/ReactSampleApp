@@ -1,6 +1,6 @@
-sudo: required
+#sudo: required
 language: android
-jdk: oraclejdk8
+#jdk: oraclejdk8
 before_install: #1.1
 - nvm install 6
 - node --version
