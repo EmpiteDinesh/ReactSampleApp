@@ -18,7 +18,7 @@ script:
 - cd android && chmod +x gradlew #3
 #- emulator -avd test -no-skin -no-audio -no-window &
 #- ./gradlew assembleDebug --stacktrace #3
-./gradlew build check #3
+- ./gradlew build check #3
 - cd app
 - ls
 
