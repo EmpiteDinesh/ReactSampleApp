@@ -18,3 +18,9 @@ script:
 - ./gradlew assembleRelease
 - cd app/build/outputs/apk
 - ls
+
+eploy:
+  provider: script
+  script: deploy.sh
+  on:
+    branch: master
