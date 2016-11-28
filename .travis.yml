@@ -22,7 +22,6 @@ script:
 deploy:
   provider: script
   script:
-    - cd ..
-    - ./deploy.sh
+    - ls
   on:
     branch: master
