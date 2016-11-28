@@ -16,8 +16,6 @@ script:
 - npm run ci
 - cd android && chmod +x gradlew
 - ./gradlew assembleRelease
-- cd app/build/outputs/apk
-- ls
 
 deploy:
   skip_cleanup: true
