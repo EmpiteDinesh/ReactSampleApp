@@ -20,12 +20,9 @@ script:
 deploy:
   skip_cleanup: true
   provider: script
-  script:
-    - ls
-    - Crashlytics.framework/submit 844fc64f769a06130c2f10c39d33b889492d2657 a1d149e24f3c1058435d5e6019b43689f41709c38ee25f3dbe6c78019f1f3ce6
-    - ipaPath app/build/outputs/apk/app-release-unsigned.apk
-    - emails TestEmail@fabric.io,AmazingTester@twitter.com
-    - notifications YES
-  file: app/build/outputs/apk/app-release-unsigned.apk
+  script: ./Crashlytics.framework/submit 844fc64f769a06130c2f10c39d33b889492d2657 a1d149e24f3c1058435d5e6019b43689f41709c38ee25f3dbe6c78019f1f3ce6
+    -ipaPath app/build/outputs/apk/app-release-unsigned.apk
+    -emails dinesh@empite.com
+    -notifications YES
   on:
     branch: master
