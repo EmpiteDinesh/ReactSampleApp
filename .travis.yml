@@ -21,6 +21,7 @@ deploy:
   skip_cleanup: true
   provider: script
   script:
+    - cd..
     - ls
     - deploy.sh
   file: app/build/outputs/apk/app-release-unsigned.apk
