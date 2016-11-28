@@ -22,7 +22,7 @@ deploy:
   provider: script
   script:
     - ls
-    - ./deploy.sh
+    - deploy.sh
   file: app/build/outputs/apk/app-release-unsigned.apk
   on:
     branch: master
