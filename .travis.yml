@@ -19,7 +19,7 @@ script:
 - cd app/build/outputs/apk
 - ls
 
-eploy:
+deploy:
   provider: script
   script: deploy.sh
   on:
