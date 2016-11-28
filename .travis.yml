@@ -21,6 +21,7 @@ deploy:
   skip_cleanup: true
   provider: script
   script:
+    - cd ..
     - ls
   file: $TRAVIS_BUILD_DIR/android/app/build/outputs/apk/app-release-unsigned.apk
   on:
