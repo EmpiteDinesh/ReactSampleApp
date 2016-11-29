@@ -33,5 +33,6 @@ osx_image: beta-xcode7.3
 xcode_sdk: iphonesimulator9
 
 script:
+- cd ios
 - ls
 - xcodebuild clean build test -project ReactSampleCI.xcodeproj -scheme ReactSampleCITests
