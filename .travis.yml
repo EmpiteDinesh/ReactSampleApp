@@ -1,37 +1,37 @@
-#language: android
-#before_install:
-#- nvm install 6
-#- node --version
-#install:
-#- npm install
-#android:
-  #components:
-  #- build-tools-23.0.1
-  #- android-23
-  #- extra-android-m2repository
-  #- extra-google-google_play_services
-  #- extra-google-m2repository
-  #- addon-google_apis-google-16
-#script:
-#- npm run ci
-#- cd android && chmod +x gradlew
-#- ./gradlew assembleDebug
-#- ./gradlew crashlyticsUploadDistributionDebug
-#- ./gradlew assembleRelease
-#- ./gradlew crashlyticsUploadDistributionRelease
-
-language: objective-c
+language: android
 before_install:
 - nvm install 6
 - node --version
 install:
 - npm install
-
-xcode_project: ReactSampleCI.xcodeproj
-osx_image: beta-xcode7.3
-xcode_sdk: iphonesimulator9
-
+android:
+  components:
+  - build-tools-23.0.1
+  - android-23
+  - extra-android-m2repository
+  - extra-google-google_play_services
+  - extra-google-m2repository
+  - addon-google_apis-google-16
 script:
-- cd ios
-- ls
-- xcodebuild clean build -project ReactSampleCI.xcodeproj
+- npm run ci
+- cd android && chmod +x gradlew
+- ./gradlew assembleDebug
+- ./gradlew crashlyticsUploadDistributionDebug
+- ./gradlew assembleRelease
+- ./gradlew crashlyticsUploadDistributionRelease
+
+#language: objective-c
+#before_install:
+#- nvm install 6
+#- node --version
+#install:
+#- npm install
+
+#xcode_project: ReactSampleCI.xcodeproj
+#osx_image: beta-xcode7.3
+#xcode_sdk: iphonesimulator9
+
+#script:
+#- cd ios
+#- ls
+#- xcodebuild clean build -project ReactSampleCI.xcodeproj
