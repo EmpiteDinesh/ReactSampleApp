@@ -34,4 +34,4 @@ xcode_sdk: iphonesimulator9
 script:
 - cd ios
 - ls
-- xcodebuild clean build test -project ReactSampleCI.xcodeproj
+- xcodebuild clean build -project ReactSampleCI.xcodeproj
