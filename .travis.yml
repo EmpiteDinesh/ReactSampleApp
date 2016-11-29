@@ -21,6 +21,11 @@ script:
 - ./gradlew crashlyticsUploadDistributionRelease
 
 language: objective-c
+before_install:
+- nvm install 6
+- node --version
+install:
+- npm install
 
 xcode_project: ReactSampleCI.xcodeproj
 xcode_scheme: ReactSampleCITests
