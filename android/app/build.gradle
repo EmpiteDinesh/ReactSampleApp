@@ -120,15 +120,31 @@ android {
             include "armeabi-v7a", "x86"
         }
     }
+        android.signingConfigs {
+        debug {
+            storeFile file("../keystores/debug.keystore")
+            storePassword "android"
+            keyAlias "androiddebugkey"
+            keyPassword "android"
+        }
+            release {
+                storeFile file("../keystores/debug.keystore")
+                storePassword "android"
+                keyAlias "androiddebugkey"
+                keyPassword "android"
+            }
+    }
     buildTypes {
         debug {
-            minifyEnabled enableProguardInReleaseBuilds
+            minifyEnabled false
+            signingConfig signingConfigs.debug
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
             ext.betaDistributionReleaseNotes="Release Notes for this build."
             ext.betaDistributionEmails="dinesh@empite.com"
         }
         release {
-            minifyEnabled enableProguardInReleaseBuilds
+            minifyEnabled true
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
             ext.betaDistributionReleaseNotes="Release Notes for this build."
             ext.betaDistributionEmails="dinesh@empite.com"
