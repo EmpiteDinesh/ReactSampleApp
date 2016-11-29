@@ -15,7 +15,7 @@ android:
 script:
 - npm run ci
 - cd android && chmod +x gradlew
-- ./gradlew assembleDebug crashlyticsUploadDistributionDebug
+- ./gradlew assembleDebug
 
 #deploy:
   #skip_cleanup: true
