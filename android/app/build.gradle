@@ -141,14 +141,14 @@ android {
             signingConfig signingConfigs.debug
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
             ext.betaDistributionReleaseNotes="Release Notes for this build."
-            ext.betaDistributionEmails="dinesh@empite.com"
+            ext.betaDistributionEmails="dkaluwila.anu@gmail.com"
         }
         release {
             minifyEnabled true
             signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
             ext.betaDistributionReleaseNotes="Release Notes for this build."
-            ext.betaDistributionEmails="dinesh@empite.com"
+            ext.betaDistributionEmails="dkaluwila.anu@gmail.com"
         }
     }
     // applicationVariants are e.g. debug, release
